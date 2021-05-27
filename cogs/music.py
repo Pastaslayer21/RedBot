@@ -17,7 +17,7 @@ class Music(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @bot.command()
+    @commands.command()
     async def play(ctx, url : str):
         song_there = os.path.isfile("song.mp3")
         try:
@@ -46,7 +46,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
         
-    @bot.command()
+    @commands.command()
     async def play(ctx, url : str):
         song_there = os.path.isfile("song.mp3")
         try:
@@ -76,7 +76,7 @@ class Music(commands.Cog):
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
 
-    @bot.command()
+    @commands.command()
     async def leave(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         if voice.is_connected():
@@ -85,7 +85,7 @@ class Music(commands.Cog):
             await ctx.send("The bot is not connected to a voice channel.")
 
 
-    @bot.command()
+    @commands.command()
     async def pause(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         if voice.is_playing():
@@ -94,7 +94,7 @@ class Music(commands.Cog):
             await ctx.send("Currently no audio is playing.")
 
 
-    @bot.command()
+    @commands.command()
     async def resume(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         if voice.is_paused():
@@ -102,18 +102,18 @@ class Music(commands.Cog):
         else:
             await ctx.send("The audio is not paused.")
 
-    @bot.command()
+    @commands.command()
     async def help(ctx):
         embedVar.add_field(name='')
 
 
-    @bot.command()
+    @commands.command()
     async def stop(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         voice.stop()
 
 
-    @bot.command()
+    @commands.command()
     async def seduce(ctx, url : orville peck dead of night, user: discord.User):
         await ctx.send(f" <@{ctx.author.id}> seduces <@{user.id}> ")
 
@@ -144,7 +144,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def lefish(ctx, url : le fish full version, user: discord.User):
         await ctx.send(f" ITS LE FISH TIME <@{ctx.author.id}> ")
 
@@ -175,7 +175,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def chesstime(ctx, url : yakuza OST baka mitai)
         await ctx.send(f" wow Ann going full tryhard now")
 
@@ -206,7 +206,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def glory(ctx, url : sabaton livgardet)
         await ctx.send(f" Ärat livgardet står, Grundat av landsfader vår, Hängiven tjänst i 500 år, Från tåget över Bält")
 
@@ -237,7 +237,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def shuffle(ctx, url : skyrim shuffle)
         await ctx.send(f" ITS TIME TO SKYRIM SHUFFLE IN PRAISE OF OUR LORD TODD 'THE GOD' HOWARD")
 
@@ -279,7 +279,7 @@ class Music(commands.Cog):
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
 
-    @bot.command()
+    @commands.command()
     async def leave(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         if voice.is_connected():
@@ -288,7 +288,7 @@ class Music(commands.Cog):
             await ctx.send("The bot is not connected to a voice channel.")
 
 
-    @bot.command()
+    @commands.command()
     async def pause(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         if voice.is_playing():
@@ -297,7 +297,7 @@ class Music(commands.Cog):
             await ctx.send("Currently no audio is playing.")
 
 
-    @bot.command()
+    @commands.command()
     async def resume(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         if voice.is_paused():
@@ -305,12 +305,12 @@ class Music(commands.Cog):
         else:
             await ctx.send("The audio is not paused.")
 
-    @bot.command()
+    @commands.command()
     async def help(ctx):
         embedVar.add_field(name='')
 
 
-    @bot.command()
+    @commands.command()
     async def stop(ctx):
         voice = discord.utils.get(bot.voice_bots, guild=ctx.guild)
         voice.stop()
