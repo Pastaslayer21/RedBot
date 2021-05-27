@@ -316,7 +316,7 @@ class Music(commands.Cog):
         voice.stop()
 
 
-    @bot.command()
+    @commands.command()
     async def seduce(ctx, url : orville peck dead of night, user: discord.User):
         await ctx.send(f" <@{ctx.author.id}> seduces <@{user.id}> ")
 
@@ -347,7 +347,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def lefish(ctx, url : le fish full version, user: discord.User):
         await ctx.send(f" ITS LE FISH TIME <@{ctx.author.id}> ")
 
@@ -378,7 +378,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def chesstime(ctx, url : yakuza OST baka mitai)
         await ctx.send(f" wow Ann going full tryhard now")
 
@@ -409,7 +409,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def glory(ctx, url : sabaton livgardet)
         await ctx.send(f" Ärat livgardet står, Grundat av landsfader vår, Hängiven tjänst i 500 år, Från tåget över Bält")
 
@@ -440,7 +440,7 @@ class Music(commands.Cog):
                 os.rename(file, "song.mp3")
         voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
-    @bot.command()
+    @commands.command()
     async def shuffle(ctx, url : skyrim shuffle)
         await ctx.send(f" ITS TIME TO SKYRIM SHUFFLE IN PRAISE OF OUR LORD TODD 'THE GOD' HOWARD")
 
